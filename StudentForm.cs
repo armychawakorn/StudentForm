@@ -1,3 +1,7 @@
+using System.Text.Json;
+using System.Text.Json.Serialization;
+using System.Xml;
+
 namespace StudentForm
 {
     public partial class StudentForm : Form
@@ -66,5 +70,19 @@ namespace StudentForm
             students.Clear();
             TableGG.Rows.Clear();
         }
+
+        private void SaveXML_Click(object sender, EventArgs e)
+        {
+            Student ggez = new Student();
+            ggez.SetData(EStudentType._Name, "ggez");
+            string jsonString = JsonSerializer.Serialize(ggez);
+            MessageBox.Show(jsonString);
+        }
+
+        private void ClearXML_Click(object sender, EventArgs e)
+        {
+
+        }
     }
+
 }

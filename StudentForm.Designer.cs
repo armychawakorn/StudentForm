@@ -54,6 +54,8 @@
             this.StudentCount = new System.Windows.Forms.TextBox();
             this.MaxGrade = new System.Windows.Forms.TextBox();
             this.MinGrade = new System.Windows.Forms.TextBox();
+            this.SaveXML = new System.Windows.Forms.Button();
+            this.ClearXML = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.TableGG)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,6 +72,8 @@
             // Form_Name
             // 
             this.Form_Name.AutoSize = true;
+            this.Form_Name.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.Form_Name.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Form_Name.Location = new System.Drawing.Point(71, 86);
             this.Form_Name.Name = "Form_Name";
             this.Form_Name.Size = new System.Drawing.Size(26, 20);
@@ -93,6 +97,8 @@
             // Form_ID
             // 
             this.Form_ID.AutoSize = true;
+            this.Form_ID.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.Form_ID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Form_ID.Location = new System.Drawing.Point(13, 119);
             this.Form_ID.Name = "Form_ID";
             this.Form_ID.Size = new System.Drawing.Size(84, 20);
@@ -110,6 +116,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(57, 152);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 20);
@@ -127,6 +135,8 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label2.Location = new System.Drawing.Point(49, 185);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(48, 20);
@@ -144,6 +154,8 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label3.Location = new System.Drawing.Point(60, 218);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 20);
@@ -161,6 +173,8 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label4.Location = new System.Drawing.Point(57, 251);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(40, 20);
@@ -256,7 +270,9 @@
             // LabelTitle
             // 
             this.LabelTitle.AutoSize = true;
+            this.LabelTitle.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.LabelTitle.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LabelTitle.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.LabelTitle.Location = new System.Drawing.Point(112, 25);
             this.LabelTitle.Name = "LabelTitle";
             this.LabelTitle.Size = new System.Drawing.Size(147, 38);
@@ -265,17 +281,17 @@
             // 
             // StudentCount
             // 
-            this.StudentCount.Location = new System.Drawing.Point(946, 25);
+            this.StudentCount.Location = new System.Drawing.Point(941, 25);
             this.StudentCount.Name = "StudentCount";
             this.StudentCount.ReadOnly = true;
-            this.StudentCount.Size = new System.Drawing.Size(212, 27);
+            this.StudentCount.Size = new System.Drawing.Size(216, 27);
             this.StudentCount.TabIndex = 18;
             this.StudentCount.Text = "จำนวนนักศึกษา 0 คน";
             this.StudentCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // MaxGrade
             // 
-            this.MaxGrade.Location = new System.Drawing.Point(653, 25);
+            this.MaxGrade.Location = new System.Drawing.Point(648, 25);
             this.MaxGrade.Name = "MaxGrade";
             this.MaxGrade.ReadOnly = true;
             this.MaxGrade.Size = new System.Drawing.Size(287, 27);
@@ -284,18 +300,42 @@
             // 
             // MinGrade
             // 
-            this.MinGrade.Location = new System.Drawing.Point(360, 25);
+            this.MinGrade.Location = new System.Drawing.Point(355, 25);
             this.MinGrade.Name = "MinGrade";
             this.MinGrade.ReadOnly = true;
             this.MinGrade.Size = new System.Drawing.Size(287, 27);
             this.MinGrade.TabIndex = 20;
             this.MinGrade.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // SaveXML
+            // 
+            this.SaveXML.Location = new System.Drawing.Point(27, 339);
+            this.SaveXML.Name = "SaveXML";
+            this.SaveXML.Size = new System.Drawing.Size(94, 29);
+            this.SaveXML.TabIndex = 21;
+            this.SaveXML.Text = "เซฟลงเครื่อง";
+            this.SaveXML.UseVisualStyleBackColor = true;
+            this.SaveXML.Click += new System.EventHandler(this.SaveXML_Click);
+            // 
+            // ClearXML
+            // 
+            this.ClearXML.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ClearXML.Location = new System.Drawing.Point(127, 339);
+            this.ClearXML.Name = "ClearXML";
+            this.ClearXML.Size = new System.Drawing.Size(94, 29);
+            this.ClearXML.TabIndex = 22;
+            this.ClearXML.Text = "เคลียเอ็กเอ็มแอล";
+            this.ClearXML.UseVisualStyleBackColor = true;
+            this.ClearXML.Click += new System.EventHandler(this.ClearXML_Click);
+            // 
             // StudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(1198, 450);
+            this.Controls.Add(this.ClearXML);
+            this.Controls.Add(this.SaveXML);
             this.Controls.Add(this.MinGrade);
             this.Controls.Add(this.MaxGrade);
             this.Controls.Add(this.StudentCount);
@@ -352,5 +392,7 @@
         private TextBox StudentCount;
         private TextBox MaxGrade;
         private TextBox MinGrade;
+        private Button SaveXML;
+        private Button ClearXML;
     }
 }
