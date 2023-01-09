@@ -1,0 +1,17 @@
+C:\Users\Administrator\source\repos\armychawakorn\CSharp-simple-oop\OOP-Simple2\bin\Debug\net6.0-windows\OOP-Simple2.exe
+C:\Users\Administrator\source\repos\armychawakorn\CSharp-simple-oop\OOP-Simple2\bin\Debug\net6.0-windows\OOP-Simple2.deps.json
+C:\Users\Administrator\source\repos\armychawakorn\CSharp-simple-oop\OOP-Simple2\bin\Debug\net6.0-windows\OOP-Simple2.runtimeconfig.json
+C:\Users\Administrator\source\repos\armychawakorn\CSharp-simple-oop\OOP-Simple2\bin\Debug\net6.0-windows\OOP-Simple2.dll
+C:\Users\Administrator\source\repos\armychawakorn\CSharp-simple-oop\OOP-Simple2\bin\Debug\net6.0-windows\OOP-Simple2.pdb
+C:\Users\Administrator\source\repos\armychawakorn\CSharp-simple-oop\OOP-Simple2\obj\Debug\net6.0-windows\OOP-Simple2.csproj.AssemblyReference.cache
+C:\Users\Administrator\source\repos\armychawakorn\CSharp-simple-oop\OOP-Simple2\obj\Debug\net6.0-windows\OOP-Simple2.csproj.GenerateResource.cache
+C:\Users\Administrator\source\repos\armychawakorn\CSharp-simple-oop\OOP-Simple2\obj\Debug\net6.0-windows\OOP-Simple2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\source\repos\armychawakorn\CSharp-simple-oop\OOP-Simple2\obj\Debug\net6.0-windows\OOP-Simple2.AssemblyInfoInputs.cache
+C:\Users\Administrator\source\repos\armychawakorn\CSharp-simple-oop\OOP-Simple2\obj\Debug\net6.0-windows\OOP-Simple2.AssemblyInfo.cs
+C:\Users\Administrator\source\repos\armychawakorn\CSharp-simple-oop\OOP-Simple2\obj\Debug\net6.0-windows\OOP-Simple2.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\armychawakorn\CSharp-simple-oop\OOP-Simple2\obj\Debug\net6.0-windows\OOP-Simple2.dll
+C:\Users\Administrator\source\repos\armychawakorn\CSharp-simple-oop\OOP-Simple2\obj\Debug\net6.0-windows\refint\OOP-Simple2.dll
+C:\Users\Administrator\source\repos\armychawakorn\CSharp-simple-oop\OOP-Simple2\obj\Debug\net6.0-windows\OOP-Simple2.pdb
+C:\Users\Administrator\source\repos\armychawakorn\CSharp-simple-oop\OOP-Simple2\obj\Debug\net6.0-windows\OOP-Simple2.genruntimeconfig.cache
+C:\Users\Administrator\source\repos\armychawakorn\CSharp-simple-oop\OOP-Simple2\obj\Debug\net6.0-windows\ref\OOP-Simple2.dll
+C:\Users\Administrator\source\repos\armychawakorn\CSharp-simple-oop\OOP-Simple2\obj\Debug\net6.0-windows\OOP_Simple2.StudentForm.resources
