@@ -41,7 +41,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.TextBox_Major = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.TableGG = new System.Windows.Forms.DataGridView();
+            this.TableDataGrid = new System.Windows.Forms.DataGridView();
             this.StudentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StudentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Year = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,9 +54,7 @@
             this.StudentCount = new System.Windows.Forms.TextBox();
             this.MaxGrade = new System.Windows.Forms.TextBox();
             this.MinGrade = new System.Windows.Forms.TextBox();
-            this.SaveXML = new System.Windows.Forms.Button();
-            this.ClearXML = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.TableGG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TableDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // Submit_btn
@@ -72,8 +70,8 @@
             // Form_Name
             // 
             this.Form_Name.AutoSize = true;
-            this.Form_Name.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.Form_Name.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Form_Name.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Form_Name.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Form_Name.Location = new System.Drawing.Point(71, 86);
             this.Form_Name.Name = "Form_Name";
             this.Form_Name.Size = new System.Drawing.Size(26, 20);
@@ -97,8 +95,8 @@
             // Form_ID
             // 
             this.Form_ID.AutoSize = true;
-            this.Form_ID.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.Form_ID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Form_ID.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Form_ID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Form_ID.Location = new System.Drawing.Point(13, 119);
             this.Form_ID.Name = "Form_ID";
             this.Form_ID.Size = new System.Drawing.Size(84, 20);
@@ -116,8 +114,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Location = new System.Drawing.Point(57, 152);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 20);
@@ -135,13 +133,13 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Location = new System.Drawing.Point(49, 185);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 20);
+            this.label2.Size = new System.Drawing.Size(47, 20);
             this.label2.TabIndex = 8;
-            this.label2.Text = "ส่วนสูว";
+            this.label2.Text = "ส่วนสูง";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // TextBox_Grade
@@ -154,8 +152,8 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label3.Location = new System.Drawing.Point(60, 218);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 20);
@@ -173,8 +171,8 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label4.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label4.Location = new System.Drawing.Point(57, 251);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(40, 20);
@@ -182,22 +180,24 @@
             this.label4.Text = "สาขา";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // TableGG
+            // TableDataGrid
             // 
-            this.TableGG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TableGG.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.TableDataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TableDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TableDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.StudentName,
             this.StudentID,
             this.Year,
             this.Tall,
             this.Grade,
             this.Major});
-            this.TableGG.Location = new System.Drawing.Point(355, 58);
-            this.TableGG.Name = "TableGG";
-            this.TableGG.RowHeadersWidth = 51;
-            this.TableGG.RowTemplate.Height = 29;
-            this.TableGG.Size = new System.Drawing.Size(803, 362);
-            this.TableGG.TabIndex = 14;
+            this.TableDataGrid.Location = new System.Drawing.Point(339, 58);
+            this.TableDataGrid.Name = "TableDataGrid";
+            this.TableDataGrid.RowHeadersWidth = 51;
+            this.TableDataGrid.RowTemplate.Height = 29;
+            this.TableDataGrid.Size = new System.Drawing.Size(803, 373);
+            this.TableDataGrid.TabIndex = 14;
             // 
             // StudentName
             // 
@@ -270,9 +270,9 @@
             // LabelTitle
             // 
             this.LabelTitle.AutoSize = true;
-            this.LabelTitle.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.LabelTitle.BackColor = System.Drawing.SystemColors.ControlLight;
             this.LabelTitle.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LabelTitle.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.LabelTitle.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.LabelTitle.Location = new System.Drawing.Point(112, 25);
             this.LabelTitle.Name = "LabelTitle";
             this.LabelTitle.Size = new System.Drawing.Size(147, 38);
@@ -281,7 +281,9 @@
             // 
             // StudentCount
             // 
-            this.StudentCount.Location = new System.Drawing.Point(941, 25);
+            this.StudentCount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.StudentCount.Location = new System.Drawing.Point(925, 25);
             this.StudentCount.Name = "StudentCount";
             this.StudentCount.ReadOnly = true;
             this.StudentCount.Size = new System.Drawing.Size(216, 27);
@@ -291,7 +293,9 @@
             // 
             // MaxGrade
             // 
-            this.MaxGrade.Location = new System.Drawing.Point(648, 25);
+            this.MaxGrade.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.MaxGrade.Location = new System.Drawing.Point(632, 25);
             this.MaxGrade.Name = "MaxGrade";
             this.MaxGrade.ReadOnly = true;
             this.MaxGrade.Size = new System.Drawing.Size(287, 27);
@@ -300,49 +304,28 @@
             // 
             // MinGrade
             // 
-            this.MinGrade.Location = new System.Drawing.Point(355, 25);
+            this.MinGrade.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.MinGrade.Location = new System.Drawing.Point(339, 25);
             this.MinGrade.Name = "MinGrade";
             this.MinGrade.ReadOnly = true;
             this.MinGrade.Size = new System.Drawing.Size(287, 27);
             this.MinGrade.TabIndex = 20;
             this.MinGrade.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // SaveXML
-            // 
-            this.SaveXML.Location = new System.Drawing.Point(27, 339);
-            this.SaveXML.Name = "SaveXML";
-            this.SaveXML.Size = new System.Drawing.Size(94, 29);
-            this.SaveXML.TabIndex = 21;
-            this.SaveXML.Text = "เซฟลงเครื่อง";
-            this.SaveXML.UseVisualStyleBackColor = true;
-            this.SaveXML.Click += new System.EventHandler(this.SaveXML_Click);
-            // 
-            // ClearXML
-            // 
-            this.ClearXML.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ClearXML.Location = new System.Drawing.Point(127, 339);
-            this.ClearXML.Name = "ClearXML";
-            this.ClearXML.Size = new System.Drawing.Size(94, 29);
-            this.ClearXML.TabIndex = 22;
-            this.ClearXML.Text = "เคลียเอ็กเอ็มแอล";
-            this.ClearXML.UseVisualStyleBackColor = true;
-            this.ClearXML.Click += new System.EventHandler(this.ClearXML_Click);
-            // 
             // StudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(1198, 450);
-            this.Controls.Add(this.ClearXML);
-            this.Controls.Add(this.SaveXML);
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ClientSize = new System.Drawing.Size(1182, 453);
             this.Controls.Add(this.MinGrade);
             this.Controls.Add(this.MaxGrade);
             this.Controls.Add(this.StudentCount);
             this.Controls.Add(this.LabelTitle);
             this.Controls.Add(this.ShowDataInGrid_btn);
             this.Controls.Add(this.Clear_btn);
-            this.Controls.Add(this.TableGG);
+            this.Controls.Add(this.TableDataGrid);
             this.Controls.Add(this.TextBox_Major);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.TextBox_Grade);
@@ -356,10 +339,13 @@
             this.Controls.Add(this.TextBox_Name);
             this.Controls.Add(this.Form_Name);
             this.Controls.Add(this.Submit_btn);
+            this.MaximumSize = new System.Drawing.Size(1200, 2000);
+            this.MinimumSize = new System.Drawing.Size(1200, 0);
             this.Name = "StudentForm";
+            this.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
             this.Text = "โปรแกรมหมี";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.TableGG)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TableDataGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -379,7 +365,7 @@
         private Label label3;
         private TextBox TextBox_Major;
         private Label label4;
-        private DataGridView TableGG;
+        private DataGridView TableDataGrid;
         private DataGridViewTextBoxColumn StudentName;
         private DataGridViewTextBoxColumn StudentID;
         private DataGridViewTextBoxColumn Year;
@@ -392,7 +378,5 @@
         private TextBox StudentCount;
         private TextBox MaxGrade;
         private TextBox MinGrade;
-        private Button SaveXML;
-        private Button ClearXML;
     }
 }

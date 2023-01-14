@@ -15,6 +15,8 @@ namespace StudentForm
         private void Form1_Load(object sender, EventArgs e)
         {
             this.StudentCount.Text = string.Format("จำนวนนักศึกษา {0} คน", students.Count().ToString());
+            MaxGrade.Text = "เกรดสูงสุดคือ 0";
+            MinGrade.Text = "เกรดต่ำสุดคือ 0";
         }
 
         private void Submit_btn_Click(object sender, EventArgs e)
@@ -25,22 +27,41 @@ namespace StudentForm
             int Year;
             try
             {
-                Name = TextBox_Name.Text;ID = TextBox_ID.Text;Year = int.Parse(TextBox_Year.Text);Height = int.Parse(TextBox_Tall.Text);Grade = double.Parse(TextBox_Grade.Text);Major = TextBox_Major.Text;
+                Name = TextBox_Name.Text;
+                ID = TextBox_ID.Text;
+                Year = int.Parse(TextBox_Year.Text);
+                Height = int.Parse(TextBox_Tall.Text);
+                Grade = double.Parse(TextBox_Grade.Text);
+                Major = TextBox_Major.Text;
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show(caption: "Error", text: "กรุณากรอกข้อมูลให้ถูกต้อง/ครบ", icon: MessageBoxIcon.Error, buttons: MessageBoxButtons.OK);
+                string newex = ex.ToString();
+                List<string> arrexception = new();
+                if(newex.Contains("line 30"))
+                {
+                    arrexception.Add("ปีเกิด");
+                }
+                if (newex.Contains("line 31"))
+                {
+                    arrexception.Add("ความสูง");
+                }
+                if (newex.Contains("line 32"))
+                {
+                    arrexception.Add("เกรด");
+                }
+                MessageBox.Show(caption: "Error", text: string.Format("กรุณาตรวจสอบ {0}", arrexception.ToArray()), icon: MessageBoxIcon.Error, buttons: MessageBoxButtons.OK);
                 return;
             }
             Name = TextBox_Name.Text; ID = TextBox_ID.Text; Year = int.Parse(TextBox_Year.Text); Height = int.Parse(TextBox_Tall.Text); Grade = double.Parse(TextBox_Grade.Text); Major = TextBox_Major.Text;
             Student student = new Student();
             student.SetData(EStudentType._Name, Name).SetData(EStudentType._Id, ID).SetData(EStudentType._BirthYear, Year).SetData(EStudentType._Height, Height).SetData(EStudentType._Grade, Grade).SetData(EStudentType._Marjor, Major);
             students.Add(student);
-            TableGG.Rows.Clear();
+            TableDataGrid.Rows.Clear();
             foreach(Student std in students)
             {
                 sortgrade.Add(double.Parse(std.GetData(EStudentType._Grade).ToString()));
-                TableGG.Rows.Add(
+                TableDataGrid.Rows.Add(
                     std.GetData(EStudentType._Name),
                     std.GetData(EStudentType._Id),
                     std.GetData(EStudentType._BirthYear),
@@ -68,20 +89,10 @@ namespace StudentForm
         private void ShowDataInGrid_btn_Click(object sender, EventArgs e)
         {
             students.Clear();
-            TableGG.Rows.Clear();
-        }
-
-        private void SaveXML_Click(object sender, EventArgs e)
-        {
-            Student ggez = new Student();
-            ggez.SetData(EStudentType._Name, "ggez");
-            string jsonString = JsonSerializer.Serialize(ggez);
-            MessageBox.Show(jsonString);
-        }
-
-        private void ClearXML_Click(object sender, EventArgs e)
-        {
-
+            TableDataGrid.Rows.Clear();
+            StudentCount.Text = "จำนวนนักศึกษา 0 คน";
+            MaxGrade.Text = "เกรดสูงสุดคือ 0";
+            MinGrade.Text = "เกรดต่ำสุดคือ 0";
         }
     }
 
