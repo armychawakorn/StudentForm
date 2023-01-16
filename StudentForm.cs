@@ -1,7 +1,3 @@
-using System.Text.Json;
-using System.Text.Json.Serialization;
-using System.Xml;
-
 namespace StudentForm
 {
     public partial class StudentForm : Form
@@ -14,9 +10,9 @@ namespace StudentForm
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.StudentCount.Text = string.Format("¨Ó¹Ç¹¹Ñ¡ÈÖ¡ÉÒ {0} ¤¹", students.Count().ToString());
-            MaxGrade.Text = "à¡Ã´ÊÙ§ÊØ´¤×Í 0";
-            MinGrade.Text = "à¡Ã´µèÓÊØ´¤×Í 0";
+            this.StudentCount.Text = string.Format("ï¿½Ó¹Ç¹ï¿½Ñ¡ï¿½Ö¡ï¿½ï¿½ {0} ï¿½ï¿½", students.Count().ToString());
+            MaxGrade.Text = "ï¿½Ã´ï¿½Ù§ï¿½Ø´ï¿½ï¿½ï¿½ 0";
+            MinGrade.Text = "ï¿½Ã´ï¿½ï¿½ï¿½ï¿½Ø´ï¿½ï¿½ï¿½ 0";
         }
 
         private void Submit_btn_Click(object sender, EventArgs e)
@@ -40,17 +36,17 @@ namespace StudentForm
                 List<string> arrexception = new();
                 if(newex.Contains("line 30"))
                 {
-                    arrexception.Add("»Õà¡Ô´");
+                    arrexception.Add("ï¿½ï¿½ï¿½Ô´");
                 }
                 if (newex.Contains("line 31"))
                 {
-                    arrexception.Add("¤ÇÒÁÊÙ§");
+                    arrexception.Add("ï¿½ï¿½ï¿½ï¿½ï¿½Ù§");
                 }
                 if (newex.Contains("line 32"))
                 {
-                    arrexception.Add("à¡Ã´");
+                    arrexception.Add("ï¿½Ã´");
                 }
-                MessageBox.Show(caption: "Error", text: string.Format("¡ÃØ³ÒµÃÇ¨ÊÍº {0}", arrexception.ToArray()), icon: MessageBoxIcon.Error, buttons: MessageBoxButtons.OK);
+                MessageBox.Show(caption: "Error", text: string.Format("ï¿½ï¿½Ø³Òµï¿½Ç¨ï¿½Íº {0}", arrexception.ToArray()), icon: MessageBoxIcon.Error, buttons: MessageBoxButtons.OK);
                 return;
             }
             Name = TextBox_Name.Text; ID = TextBox_ID.Text; Year = int.Parse(TextBox_Year.Text); Height = int.Parse(TextBox_Tall.Text); Grade = double.Parse(TextBox_Grade.Text); Major = TextBox_Major.Text;
@@ -71,9 +67,9 @@ namespace StudentForm
                 );
             }
             sortgrade.Sort();
-            MaxGrade.Text = string.Format("à¡Ã´ÊÙ§ÊØ´¤×Í {0}", sortgrade.Last().ToString());
-            MinGrade.Text = string.Format("à¡Ã´µèÓÊØ´¤×Í {0}", sortgrade.First().ToString());
-            this.StudentCount.Text = string.Format("¨Ó¹Ç¹¹Ñ¡ÈÖ¡ÉÒ {0} ¤¹", students.Count().ToString());
+            MaxGrade.Text = string.Format("ï¿½Ã´ï¿½Ù§ï¿½Ø´ï¿½ï¿½ï¿½ {0}", sortgrade.Last().ToString());
+            MinGrade.Text = string.Format("ï¿½Ã´ï¿½ï¿½ï¿½ï¿½Ø´ï¿½ï¿½ï¿½ {0}", sortgrade.First().ToString());
+            this.StudentCount.Text = string.Format("ï¿½Ó¹Ç¹ï¿½Ñ¡ï¿½Ö¡ï¿½ï¿½ {0} ï¿½ï¿½", students.Count().ToString());
         }
 
         private void Clear_btn_Click(object sender, EventArgs e)
@@ -90,9 +86,9 @@ namespace StudentForm
         {
             students.Clear();
             TableDataGrid.Rows.Clear();
-            StudentCount.Text = "¨Ó¹Ç¹¹Ñ¡ÈÖ¡ÉÒ 0 ¤¹";
-            MaxGrade.Text = "à¡Ã´ÊÙ§ÊØ´¤×Í 0";
-            MinGrade.Text = "à¡Ã´µèÓÊØ´¤×Í 0";
+            StudentCount.Text = "ï¿½Ó¹Ç¹ï¿½Ñ¡ï¿½Ö¡ï¿½ï¿½ 0 ï¿½ï¿½";
+            MaxGrade.Text = "ï¿½Ã´ï¿½Ù§ï¿½Ø´ï¿½ï¿½ï¿½ 0";
+            MinGrade.Text = "ï¿½Ã´ï¿½ï¿½ï¿½ï¿½Ø´ï¿½ï¿½ï¿½ 0";
         }
     }
 
